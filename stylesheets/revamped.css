@@ -194,13 +194,25 @@ strong {
 }
 
 /* Hero */
+.hero-revamped {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    gap: 48px;
+    align-items: center;
+    padding: 56px 6vw 72px;
+    min-height: 640px;
+}
+
+.page-hero {
+    display: flex;
+    align-items: center;
+    min-height: 520px;
+    padding: 72px 8vw 88px;
+}
+
 .hero-revamped,
 .page-hero {
     position: relative;
-    min-height: 620px;
-    display: flex;
-    align-items: center;
-    padding: 72px 8vw 88px;
     overflow: hidden;
     background:
         radial-gradient(ellipse 55% 80% at 88% 50%, rgba(145, 52, 255, 0.22), transparent 60%),
@@ -223,6 +235,23 @@ strong {
     position: relative;
     z-index: 1;
     max-width: 640px;
+}
+
+.hero-figure {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    border-radius: 18px;
+    overflow: hidden;
+    min-height: 440px;
+}
+
+.hero-figure img {
+    width: 100%;
+    height: 100%;
+    min-height: 440px;
+    object-fit: cover;
+    display: block;
 }
 
 .hero-tagline {
@@ -494,17 +523,16 @@ strong {
 .stack-visual {
     min-height: 280px;
     border-radius: 12px;
-    display: flex;
-    align-items: flex-end;
-    padding: 28px;
-    background:
-        radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.14), transparent 45%),
-        rgba(0, 0, 0, 0.18);
+    overflow: hidden;
+    background: #000;
 }
 
-.stack-visual i {
-    font-size: 42px;
-    color: #fff;
+.stack-visual img {
+    width: 100%;
+    height: 100%;
+    min-height: 280px;
+    object-fit: cover;
+    display: block;
 }
 
 .tone-1 { background: #252a23; }
@@ -590,11 +618,20 @@ strong {
     gap: 18px;
 }
 
+.cover-photo {
+    width: 100%;
+    height: 168px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+    margin-bottom: 16px;
+}
+
 .work-tile {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    min-height: 340px;
+    justify-content: flex-start;
+    min-height: 0;
     text-decoration: none;
     color: inherit;
 }
@@ -909,8 +946,9 @@ strong {
         min-height: 0;
     }
 
-    .stack-visual {
-        min-height: 140px;
+    .stack-visual,
+    .stack-visual img {
+        min-height: 220px;
     }
 
     .market-grid {
@@ -953,8 +991,16 @@ strong {
 
     .hero-revamped,
     .page-hero {
-        min-height: 520px;
+        min-height: 0;
         padding: 48px 22px 64px;
+        grid-template-columns: 1fr;
+    }
+
+    .hero-figure,
+    .hero-figure img,
+    .stack-visual,
+    .stack-visual img {
+        min-height: 220px;
     }
 
     .container-custom {
