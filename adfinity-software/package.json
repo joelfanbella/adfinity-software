@@ -1,0 +1,13 @@
+{
+  "name": "adfinity-software",
+  "version": "1.0.0",
+  "description": "Adfinity Software Solutions",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx http-server -p 3004",
+    "start": "npx http-server -p 3004"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}
